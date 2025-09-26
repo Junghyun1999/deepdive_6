@@ -7,20 +7,6 @@
     <title>Floating Button</title>
     <script src="https://kit.fontawesome.com/898d462de4.js" crossorigin="anonymous"></script>
     <style>
-        html,
-        body {
-            scroll-behavior: smooth;
-        }
-
-        .blind {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-        }
-
         .container {
             max-width: 700px;
             width: 100%;
@@ -31,42 +17,6 @@
             font: 1.2em/1.5 arial, sans-serif;
             color: #333;
             text-align: justify;
-        }
-
-        .btn-container {
-            outline: 1px solid red;
-            position: fixed;
-            /* left, top, right, bottom */
-            right: 40px;
-            bottom: 40px;
-        }
-
-        .btn {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid #d8d8d8;
-            background-color: #fff;
-            background-size: 16px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #f3f3f3;
-        }
-
-        .btn-top {
-            background-image: url('./images/icons/arrow-top.svg');
-            margin-right: 16px;
-            /* 해당요소의 우측에 여백을 지정 */
-        }
-
-        .btn-setting {
-            background-image: url('./images/icons/setting.svg');
         }
     </style>
 </head>
