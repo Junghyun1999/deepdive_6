@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naver-join</title>
+    <script src="https://kit.fontawesome.com/185d0b76a8.js" crossorigin="anonymous"></script>
     <style>
         /* div는 block level 요소라서 width, height 지정 가능 */
         /* span은 inline 요소라서 width, height 지정 불가 */
@@ -25,7 +26,7 @@
         section {
             background: #fff;
             border: 1px solid #e5e7eb;
-            border-radius: 8px;
+            border-radius: 16px;
             padding: 20px;
             max-width: 700px;
             margin: 0 auto;
@@ -48,8 +49,16 @@
 
         section header h2 strong {
             font-weight: bold;
-            color: #09aa5c;
         }
+
+       .badge-required {
+        color: #09aa5c;
+       }
+    
+       .badge-optional {
+        color: #7e7e7e;
+       }
+       
 
         section header h2 span {
             font-weight: 700;
@@ -58,12 +67,16 @@
         section header h2 a {
             font-size: 0.85rem;
             text-decoration: none;;
-            color: #818288;
+            color: #a0a0a3;
             font-weight: 500;
         }
 
          section header h2 a:hover {
             cursor: pointer;
+        }
+
+        section header i {
+            font-size: 0.8rem;
         }
 
         section header > a {
@@ -74,8 +87,8 @@
             background: #fff;
             font-weight: 500;;
             gap: 6px;
-            padding: 6px 14px; /* 버튼여백 */
-            border: 1px solid #a3a5a8;
+            padding: 6px 14px; /* 버튼 여백 줄 때 */
+            border: 1px solid #595b5e;
             border-radius: 9999px;
         }
 
@@ -84,10 +97,11 @@
         }
         
         .scroll-area {
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
             padding: 15px;
-            height: 180px;
+            height: auto;
+            max-height: 180px;
             overflow-y: auto;
             background: #fdfdfd;;
         }
@@ -104,19 +118,46 @@
 
 <body>
     <h1>Naver 회원가입 - 약관동의</h1>
+    <!-- 네이버 이용약관 -->
     <section>
         <header>
-            <!-- flex 연습하기-->
              <h2>
-            <strong>[필수]</strong>
+            <strong class="badge-required">[필수]</strong>
+            <span>네이버 이용약관</span>
+            <a href="#">전체</a>
+            <i class="fa-solid fa-arrow-right" style="color: #cfcfd2;"></i>
+        </h2>
+        </header>
+        <div class="scroll-area">
+            <h3>여러분을 환영합니다.</h3>
+            <p>
+            네이버 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 
+            본 약관은 다양한 네이버 서비스의 이용과 관련하여 네이버 서비스를 제공하는 네이버 
+            주식회사(이하 ‘네이버’)와 이를 이용하는 네이버 서비스 회원(이하 ‘회원’) 또는 
+            비회원과의 관계를 설명하며, 아울러 여러분의 네이버 서비스 이용에 도움이 될 수 
+            있는 유익한 정보를 포함하고 있습니다.
+            </p>
+            <p>
+            네이버 서비스를 이용하시거나 네이버 서비스 회원으로 가입하실 경우 
+            여러분은 본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 
+            잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.
+            </p>
+        </div>
+    </section>
+    <br>
+    <!-- 개인정보 수집 및 이용 -->
+    <section>
+        <header>
+             <h2>
+            <strong class="badge-required">[필수]</strong>
             <span>개인정보 수집 및 이용</span>
             <a href="#">전체</a>
+            <i class="fa-solid fa-arrow-right" style="color: #cfcfd2;"></i>
         </h2>
         <a href="#">
            🧒🏻 어린이용 안내
         </a> 
         </header>
-
         <div class="scroll-area">
             <p>
             개인정보보호법에 따라 네이버에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 
@@ -133,6 +174,51 @@
             </p>
         </div>
     </section>
-      
+    <br>
+    <!-- 실명 인증된 아이디로 가입 -->
+    <section>
+        <header>
+             <h2>
+            <strong class="badge-optional">[선택]</strong>
+            <span>실명 인증된 아이디로 가입</span>
+        </h2>
+        </header>
+        <div class="scroll-area">
+            <p>
+            실명 인증된 아이디로 가입하시면 본인인증이 필요한 서비스
+            (네이버 페이, 쇼핑, 멤버십 등)를 가입 후 바로 이용하실 수 있어요.
+            </p>
+        </div>
+    </section>
+    <br>
+    <!-- 위치깁ㄴ 서비스 이용약관 -->
+    <section>
+        <header>
+             <h2>
+            <strong class="badge-optional">[선택]</strong>
+            <span>위치기반서비스 이용약관</span>
+            <a href="#">전체</a>
+            <i class="fa-solid fa-arrow-right" style="color: #cfcfd2;"></i>
+        </h2>
+        </header>
+        <div class="scroll-area">
+            <p>
+            위치기반서비스 이용약관에 동의하시면, 위치를 활용한 광고 정보 수신 등을 포함하는 
+            네이버 위치기반 서비스를 이용할 수 있습니다.
+            </p>
+            <h3>제 1 조 (목적)</h3>
+            <p>
+             이 약관은 네이버 주식회사 (이하 “회사”)가 제공하는 위치기반서비스와 관련하여 
+             회사와 개인위치정보주체와의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+            </p>
+            <h3>  제 2 조 (약관 외 준칙)</h3>
+            <p>
+            이 약관에 명시되지 않은 사항은 위치정보의 보호 및 이용 등에 관한 법률, 
+            개인정보보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 전기통신기본법, 
+            전기통신사업법 등 관계법령과 회사의 이용약관 및 개인정보처리방침, 회사가 별도로 정한 지침 등에 의합니다.
+            </p>
+            
+        </div>
+    </section>
 </body>
 </html>
