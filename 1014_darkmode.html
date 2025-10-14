@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkmode 실습</title>
+     <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+    <button id="modeBtn">🌙 다크모드</button>
+
+  <script>
+    const root = document.documentElement;
+    const button = document.getElementById('modeBtn');
+    let dark = false;
+
+    button.addEventListener('click', () => {
+      if (!dark) {
+        root.style.setProperty('--bg-color', '#121212');
+        root.style.setProperty('--text-color', '#ffffff');
+        button.innerText = 'Lightmode';
+        dark = true;
+      } else {
+        root.style.setProperty('--bg-color', '#ffffff');
+        root.style.setProperty('--text-color', '#000000');
+        button.innerText = 'Darkmode';
+        dark = false;
+      }
+    });
+  </script>
+</body>
+</html>
