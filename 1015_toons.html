@@ -9,7 +9,7 @@
     body {
       font-family: "Noto Sans KR", sans-serif;
       background-image: url("./images/toons/kosigi-moon.jpg");
-      background-size: contain;        
+      background-size: cover;        
       background-repeat: no-repeat;  
     }
 
@@ -26,27 +26,24 @@
       font-weight: 700;
       color: #40474f;
       position: relative;
+      display: inline-block;
       transition: color 0.3s;
     }
 
-    .page-header a.active {
+    .page-header a.active,
+    .page-header a:hover {
       color: #4cc56a;
     }
 
     .page-header a::after {
       content: "";
       position: absolute;
-      bottom: -5px;
+      bottom:0;
       left: 0;
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: #4cc56a;
       transition: 0.4s;
-    }
-
-    .page-header a:hover,
-    .page-header a.active {
-      color: #4cc56a;
     }
 
     .page-header a.active::after,
