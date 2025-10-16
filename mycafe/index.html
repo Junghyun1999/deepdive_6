@@ -34,25 +34,38 @@
     <script>
         // 변수초기화
         const decrease = document.getElementById('decrease');
-
+        const increase = document.getElementById('increase');
+        const num = document.getElementById('number');
+        const order = document.getElementById('order');
+        const totalPrice = document.getElementById('price-total');
+        const price = document.querySelector('.price'); 
 
         
         // 여기서부터 '스크립트가이드문서.html' 을 참조하여 작성하세요
 
+        const unitPrice = 4500;
+        let count = 1;
+
         // 수량카운트
         decrease.addEventListener('click', () => {
-           // 여기에 코드를 작성하세요
-        })
+            if (count > 1) {
+            count--;
+            number.textContent = count;
+        }
+        });
         increase.addEventListener('click', () => {
-            // 여기에 코드를 작성하세요
-        })
+           count++;
+           number.textContent = count;
+        });
 
         // 주문하기 버튼 클릭시 계산하기
         order.addEventListener('click', () => {
             // price와 count수량을 곱하여 총액 계산
+            const total = unitPrice * count;
             // 계산한 값을 totalPrice에 뿌려주기 
+            totalPrice.textContent = `${total.toLocaleString()}`;
             // 위의 로직을 여기에 구현하세요
-        })
+        });
     </script>
 </body>
 
