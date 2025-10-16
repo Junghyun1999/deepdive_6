@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>::before / ::after Practice</title>
+  <style>
+    body {
+      font-family: "Noto Sans KR";
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    h2 {
+      position: relative;
+      font-size: 24px;
+      color: #333;
+    }
+    h2::before {
+      content: "★";
+      color: gold;
+      margin-right: 10px;
+    }
+
+    .btn {
+      background-color: #4cc56a;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      position: relative;
+    }
+    .btn::after {
+      content: "→";
+      margin-left: 8px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #3aad58;
+    }
+    .btn:hover::after {
+      margin-left: 15px; 
+    }
+
+    .nav {
+      display: flex;
+      gap: 40px;
+    }
+    .nav a {
+      position: relative;
+      text-decoration: none;
+      font-weight: bold;
+      color: #40474f;
+      padding-bottom: 6px;
+    }
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #4cc56a;
+      transition: 0.3s;
+    }
+    .nav a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>가상요소 연습</h2>
+  <button class="btn">다음 단계</button>
+  <nav class="nav">
+    <a href="#">HOME</a>
+    <a href="#">CONTACT</a>
+  </nav>
+</body>
+</html>
