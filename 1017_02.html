@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>function practice</title>
-  <style>
-    body {
-      font-family: "Noto Sans KR", sans-serif;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function practice</title>
+    <style>
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            text-align: center;
+        }
 
 
-    .result {
-      margin-top: 30px;
-      font-size: 20px;
-      color: #333;
-    }
-  </style>
+        .result {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
-  <h1>아이스크림 만들기</h1>
+    <h1>아이스크림 만들기</h1>
 
-  <button id="btn-a">딸기맛</button>
-  <button id="btn-b">초코맛</button>
+    <button id="btn-a">🍓 딸기맛</button>
+    <button id="btn-b">🍫 초코맛</button>
 
-  <div class="result" id="result-box">내가 고른 아이스크림은?</div>
+    <div class="result" id="result-box">내가 고른 아이스크림은?</div>
 
-  <script>
-    const btnA = document.getElementById('btn-a');
-    const btnB = document.getElementById('btn-b');
-    const result = document.getElementById('result-box');
+    <script>
+        const btnA = document.getElementById('btn-a');
+        const btnB = document.getElementById('btn-b');
+        const result = document.getElementById('result-box');
 
-    function makeIcecream(flavor) {
-      return flavor + ' 아이스크림';
-    }
+        function makeIcecream(flavor) {
+            result.textContent = flavor + ' 아이스크림 완성! 🍦';
+        }
 
-    // A 버튼 클릭 → 딸기 아이스크림
-    btnA.addEventListener('click', () => {
-      const icecream = makeIcecream('딸기');
-      result.textContent = icecream + ' 완성!';
-    });
+        // A 버튼 클릭 → 딸기 아이스크림
+        btnA.addEventListener('click', () => {
+            makeIcecream(btnA.textContent);
+        });
 
-    // B 버튼 클릭 → 초코 아이스크림
-    btnB.addEventListener('click', () => {
-      const icecream = makeIcecream('초코');
-      result.textContent = icecream + ' 완성!';
-    });
-  </script>
+        // B 버튼 클릭 → 초코 아이스크림
+        btnB.addEventListener('click', () => {
+            makeIcecream(btnB.textContent);
+        });
+
+    </script>
 </body>
+
 </html>
