@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function practice</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a {
+            background-color: gold;
+        }
+
+        .b {
+            background-color: dodgerblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Mission -->
+     <h1 onclick="changeTextA()">헤딩요소</h1>
+    <button type="box" id="btn-a" onclick="changeTextA()">클릭버튼 A</button>
+    <button type="box" id="btn-b" onclick="changeTextB()">클릭버튼 B</button>
+    <hr>
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    
+
+    <script>
+    const btnA = document.getElementById('btn-a'); 
+    const btnB = document.getElementById('btn-b'); 
+    const boxA = document.querySelector('.a');     
+    const boxB = document.querySelector('.b');    
+
+    // A버튼 클릭 → A박스 내용 변경
+    // btnA.addEventListener('click', () => {
+    //     boxA.textContent = 'Hello';
+    // });
+
+    // B버튼 클릭 → B박스 내용 변경
+    // btnB.addEventListener('click', () => {
+    //     boxB.textContent = 'World';
+    // });
+
+    function changeTextA() {
+        boxA.textContent = 'Hello'
+    }
+    function changeTextB() {
+        boxB.textContent = 'World'
+    }
+
+
+    // 아이스크림 만드는 로직
+    function makeIcecream(syrup) { 
+        return syrup + 'icecream'
+    }
+
+    console.log(makeIcecream('딸기'));
+    console.log(makeIcecream('초코'));
+    console.log(makeIcecream('바닐라'));
+    console.log(makeIcecream('땅콩')); 
+
+    </script>
+</body>
+</html>
