@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p class="a1">Grape</p>
+
+        <div>
+            당신이 선택하신 과일은 <span id="reslut">000</span>입니다.
+        </div>
+    </div>
+
+    <script>
+
+        const al = document.querySelector('.a1')
+        // p태그를 클릭하면, '당신이 선택하신 과일은 Grape 입니다' 출력하기
+        
+        const result = document.getElementById('reslut');
+
+        function changeTextA() {
+            result.textContent = 'Grape';
+        }
+
+        //함수표현식
+        /*
+        const changeText = () => {
+        result.textContent = 'grape';
+        }
+        const.changeText = function() {
+        result.textContent = 'grape';
+        }
+        */
+
+        //2025 ES6 -> Es15(2024)
+        a1.addEventListner('click', (event) => {
+        result.textContent = event.target.textContent)
+        changeTextA(
+            })
+    </script>
+</body>
+</html>
