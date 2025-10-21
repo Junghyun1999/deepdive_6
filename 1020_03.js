@@ -69,3 +69,11 @@ function checkLogin(userId, userPw) {
 
 checkLogin("hello", 1234);
 checkLogin("ghost", 1234);
+
+function getDcPrice(firstPrice, dc) {
+  const finalPrice = firstPrice * (1 - dc / 100);
+  console.log(`할인율 ${dc}% 적용 시 최종 가격은 ${finalPrice}원입니다.`);
+}
+
+getDcPrice(50000, 20);
+
