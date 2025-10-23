@@ -8,4 +8,15 @@ for (let i = 0; i < 5; i++) {
   result = result + numbers[i]; //재할당
 }
 
+/*
+//length 길이구하기
+for (let i = 0; i < numbers.length; i++) {
+  result = result + numbers[i]; //재할당
+}
+*/
+
 console.log(`${numbers}의 총 합은 ${result} 입니다.`)
+//미션결과 콘솔 캡쳐하기
+
+const str = 'Hello World'
+console.log(str.length);
